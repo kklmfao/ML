@@ -1522,6 +1522,7 @@ dependencies = [
     { name = "statsmodels" },
     { name = "torch" },
     { name = "torchvision" },
+    { name = "tqdm" },
     { name = "xgboost" },
 ]
 
@@ -1541,6 +1542,7 @@ requires-dist = [
     { name = "statsmodels", specifier = ">=0.14.6" },
     { name = "torch", specifier = ">=2.11.0" },
     { name = "torchvision", specifier = ">=0.26.0" },
+    { name = "tqdm", specifier = ">=4.67.3" },
     { name = "xgboost", specifier = ">=3.2.0" },
 ]
 
