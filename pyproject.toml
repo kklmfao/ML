@@ -22,3 +22,29 @@ dependencies = [
     "tqdm>=4.67.3",
     "xgboost>=3.2.0",
 ]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+# On Windows and Linux (WSL), use the CUDA 13.0 index
+# On macOS (Darwin), use the CPU index (Metal is bundled in the standard Mac torch build)
+torch = [
+  { index = "pytorch-cu130", marker = "sys_platform == 'win32' or sys_platform == 'linux'" },
+  { index = "pytorch-cpu", marker = "sys_platform == 'darwin'" },
+]
+torchvision = [
+  { index = "pytorch-cu130", marker = "sys_platform == 'win32' or sys_platform == 'linux'" },
+  { index = "pytorch-cpu", marker = "sys_platform == 'darwin'" },
+]
+torchaudio = [
+  { index = "pytorch-cu130", marker = "sys_platform == 'win32' or sys_platform == 'linux'" },
+  { index = "pytorch-cpu", marker = "sys_platform == 'darwin'" },
+]
