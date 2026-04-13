@@ -46,7 +46,10 @@ jupyter notebook
 ML/
 ├── iris-flower/          # Individual ML projects
 │   └── notebook.ipynb
+├── own-linear-regression/
+│   └── notebook.ipynb
 ├── pyproject.toml        # Project dependencies
+├── hello.py              # Not Used
 └── README.md
 ```
 
